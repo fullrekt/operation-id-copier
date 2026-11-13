@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подключение к БД</title>
+  <link rel="stylesheet" href="workspace.css">
+  <script type="module" src="options.js"></script>
+</head>
+<body>
+  <main class="settings">
+    <header><h1>Подключение к БД</h1></header>
+    <p>Запусти «Настроить БД.command» в папке расширения. Введи там логин и пароль PostgreSQL, затем вставь сюда выданный ключ.</p>
+    <form id="settings">
+      <label for="extension-id">ID этого расширения</label>
+      <input id="extension-id" readonly spellcheck="false" aria-describedby="id-hint">
+      <p id="id-hint" class="hint">Укажи этот ID при настройке локального сервиса.</p>
+      <label for="token">Ключ локального сервиса</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" required minlength="64" maxlength="64" aria-describedby="token-hint">
+      <p id="token-hint" class="hint">Это ключ из окна настройки, а не пароль PostgreSQL. Он сохраняется только в этом браузере.</p>
+      <button type="submit">Сохранить</button>
+    </form>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <p class="hint">Перед проверкой ID включи VPN и запусти «Запустить БД.command». Сервис работает в фоне — Terminal можно закрыть.</p>
+  </main>
+</body>
+</html>

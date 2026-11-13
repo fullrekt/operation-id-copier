@@ -1,0 +1,16 @@
+{
+  "name": "operation-id-postgres-bridge",
+  "version": "2.0.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test api.test.mjs"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  }
+}

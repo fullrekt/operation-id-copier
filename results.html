@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>report_stock — результат</title>
+  <link rel="stylesheet" href="workspace.css">
+  <script type="module" src="results.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>report_stock</h1>
+      <div class="actions"><a href="options.html" target="_blank" rel="noopener">Подключение</a><button id="refresh" type="button">Повторить запрос</button></div>
+    </header>
+    <p id="status" class="status" role="status" aria-live="polite">Загружаю данные…</p>
+    <section id="result" hidden aria-label="Результат запроса">
+      <div class="table-scroll" tabindex="0" aria-label="Таблица результатов; можно прокручивать горизонтально">
+        <table><thead><tr id="columns"></tr></thead><tbody id="rows"></tbody></table>
+      </div>
+      <nav aria-label="Страницы результата"><button id="previous" type="button" class="secondary">Назад</button><span id="page-label"></span><button id="next" type="button" class="secondary">Далее</button></nav>
+    </section>
+    <section id="missing" class="missing" hidden aria-label="ID без строк в базе"><p>ID, для которых не найдено строк:</p><pre id="missing-ids"></pre></section>
+    <details id="sql-detail" hidden><summary>SQL и отправленные ID</summary><pre id="sql"></pre></details>
+  </main>
+</body>
+</html>
